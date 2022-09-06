@@ -1,1 +1,48 @@
-<h1>Hello World</h1>
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Credit Risk Management ScoreCards</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="loan_amount" placeholder="loan_amount" required="required" /><br>
+    	<input type="text" name="loan_duration" placeholder="loan_duration" required="required" /><br>
+        <input type="text" name="payments" placeholder="payments" required="required" /><br>
+        <input type="text" name="trans_date" placeholder="trans_date" required="required" /><br>
+        <input type="text" name="balance" placeholder="balance" required="required" /><br>
+        <input type="text" name="bank_to" placeholder="bank_to" required="required" /><br>
+        <input type="text" name="account_to" placeholder="account_to" required="required" /><br>
+        <input type="text" name="amount" placeholder="amount" required="required" /><br>
+        <input type="text" name="district_id" placeholder="district_id" required="required" /><br>
+        <input type="text" name="frequency" placeholder="frequency" required="required" /><br>
+        <input type="text" name="account_date" placeholder="account_date" required="required" /><br>
+        <input type="text" name="disp_id" placeholder="disp_id" required="required" /><br>
+        <input type="text" name="disposition_type" placeholder="disposition_type" required="required" /><br>
+        
+       
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{prediction_text}}
+
+</body>
+</html>

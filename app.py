@@ -21,6 +21,16 @@ def predict_api():
     print(output)
     return jsonify(output)
 
+
+@app.route('/predict' , methods = ['POST'])
+def predict():
+    data = request.form
+    final_input = scaler.transform(data)
+    print(data)
+    print(final_input)
+    output = model.predict(data)
+    return render_template("home.html",prediction_text = "The Scorecard prediction score is {}".format(output))
+
 if __name__ =="__main__":
     app.run(debug=True)
 
