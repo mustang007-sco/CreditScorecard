@@ -1,5 +1,6 @@
-numpy
+upgrade pip
 toad
+numpy
 pandas
 gunicorn
 Flask
