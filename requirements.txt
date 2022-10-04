@@ -1,6 +1,8 @@
+toad
+numpy
 pandas
 gunicorn
 Flask
 matplotlib
 sklearn
-toad
+
