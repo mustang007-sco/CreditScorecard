@@ -1,0 +1,7 @@
+pandas
+numpy
+gunicorn
+Flask
+matplotlib
+sklearn
+toad
